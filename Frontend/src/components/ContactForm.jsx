@@ -39,7 +39,7 @@ export default function ContactForm() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/contacts", form);
+      await axios.post("https://contact-management-gutl.onrender.com/api/contacts", form);
       showAlert("success", "Contact saved successfully!");
       setForm({ name: "", email: "", phone: "", message: "" });
     } catch (error) {

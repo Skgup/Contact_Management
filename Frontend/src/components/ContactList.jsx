@@ -8,12 +8,12 @@ export default function ContactList() {
   const navigate = useNavigate();
 
   const fetchContacts = async () => {
-    const res = await axios.get("http://localhost:5000/api/contacts");
+    const res = await axios.get("https://contact-management-gutl.onrender.com/api/contacts");
     setContacts(res.data);
   };
 
   const deleteContact = async (id) => {
-    await axios.delete(`http://localhost:5000/api/contacts/${id}`);
+    await axios.delete(`https://contact-management-gutl.onrender.com/api/contacts/${id}`);
     fetchContacts();
   };
 
